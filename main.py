@@ -1,1 +1,1 @@
-print("Витя еблан")
+print("Hello world")
