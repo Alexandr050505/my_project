@@ -1,32 +1,27 @@
 # === ЗАДАНИЕ 1 ===
-print("\n--- Задание 1: Квадраты чисел ---")
+print("привет")
 squares = [x ** 2 for x in range(1, 11)]
 print("Квадраты чисел от 1 до 10:", squares)
 
 # === ЗАДАНИЕ 2 ===
-print("\n--- Задание 2: Четные числа ---")
 even_numbers = [x for x in range(1, 20) if x % 2 == 0]
 print("Четные числа от 1 до 19:", even_numbers)
 
 # === ЗАДАНИЕ 3 ===
-print("\n--- Задание 3: Работа со строками ---")
 words = ["python", "Java", "c++", "Rust", "go"]
 filtered_words = [word.upper() for word in words if len(word) > 3]
 print("Слова в верхнем регистре длиннее 3 символов:", filtered_words)
 
 # === ЗАДАНИЕ 4 ===
-print("\n--- Задание 4: Итератор Countdown ---")
-
-
 class Countdown:
-    def __init__(self, n):
+    def __init__(self, n): #Инициализирует начальное значение отсчёта.
         self.n = n
         self.current = n
 
-    def __iter__(self):
+    def __iter__(self): #Возвращает сам объект в качестве итератора.
         return self
 
-    def __next__(self):
+    def __next__(self): #Возвращает следующее значение.
         if self.current < 1:
             raise StopIteration
         value = self.current
@@ -41,9 +36,6 @@ for x in Countdown(n):
 print()
 
 # === ЗАДАНИЕ 5 ===
-print("\n--- Задание 5: Числа Фибоначчи ---")
-
-
 def fibonacci(n):
     a, b = 0, 1
     count = 0
@@ -59,7 +51,6 @@ for num in fibonacci(5):
 print()
 
 # === ЗАДАНИЕ 6 ===
-print("\n--- Задание 6: Финансовый калькулятор ---")
 from decimal import Decimal, getcontext
 
 getcontext().prec = 10
@@ -86,7 +77,6 @@ def calculate_deposit():
 
 calculate_deposit()
 # === ЗАДАНИЕ 7 ===
-print("\n--- Задание 7: Дроби ---")
 from fractions import Fraction
 
 frac1 = Fraction(3, 4)
@@ -106,7 +96,6 @@ print(f"Умножение: {frac1} × {frac2} = {multiplication}")
 print(f"Деление: {frac1} ÷ {frac2} = {division}")
 
 # === ЗАДАНИЕ 8 ===
-print("\n--- Задание 8: Дата и время ---")
 from datetime import datetime
 
 now = datetime.now()
@@ -115,7 +104,6 @@ print("Только текущая дата:", now.date())
 print("Только текущее время:", now.time())
 
 # === ЗАДАНИЕ 9 ===
-print("\n--- Задание 9: Разница дат ---")
 from datetime import date
 
 birthday = date(2005, 5, 5)  # год, месяц, день
@@ -135,9 +123,6 @@ print(f"Дней прошло с рождения: {days_passed}")
 print(f"Дней до следующего дня рождения: {days_to_birthday}")
 
 # === ЗАДАНИЕ 10 ===
-print("\n--- Задание 10: Форматирование даты ---")
-
-
 def format_datetime(dt):
     months = {
         1: "января", 2: "февраля", 3: "марта", 4: "апреля",
