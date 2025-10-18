@@ -1,4 +1,3 @@
-
 def logger(func):
     def wrapper(*args, **kwargs):
         print(f"Вызов функции {func.__name__} с аргументами {args} и {kwargs}")
@@ -7,7 +6,6 @@ def logger(func):
         return result
 
     return wrapper
-
 
 def require_role(allowed_roles):
     def decorator(func):
@@ -22,12 +20,9 @@ def require_role(allowed_roles):
 
     return decorator
 
-
-
 @logger
 def add(a, b):
     return a + b
-
 
 @logger
 def divide(a, b):
@@ -58,7 +53,7 @@ def view_data(user):
     return "Данные показаны"
 
 if __name__ == "__main__":
-    print("=== ТЕСТИРОВАНИЕ ДЕКОРАТОРА ЛОГИРОВАНИЯ ===")
+    print("ТЕСТИРОВАНИЕ ДЕКОРАТОРА ЛОГИРОВАНИЯ")
     add(5, 3)
     print()
     divide(10, 2)
@@ -67,13 +62,11 @@ if __name__ == "__main__":
     print()
     greet("Анна")
 
-    print("\n" + "=" * 50 + "\n")
-
-    print("=== ТЕСТИРОВАНИЕ ДЕКОРАТОРА ДОСТУПА ===")
+    print("ТЕСТИРОВАНИЕ ДЕКОРАТОРА ДОСТУПА")
     users = [
         {'name': 'Алексей', 'role': 'admin'},
         {'name': 'Мария', 'role': 'manager'},
-        {'name': 'Иван', 'role': 'user'},
+        {'name': 'Александр', 'role': 'user'},
         {'name': 'Ольга', 'role': 'guest'}
     ]
 
